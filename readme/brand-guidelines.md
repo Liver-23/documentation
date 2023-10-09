@@ -53,5 +53,5 @@ These branding assets are an integral part of Cascadia's visual identity that en
 
 
 {% hint style="info" %}
-Additional Brand Assets can be found on [Google Drive](https://drive.google.com/drive/folders/1nxPnQgDAFwPljLZ3inV63ticRh97uW9X?usp=sharing).
+Additional brand assets can be found on [Google Drive](https://drive.google.com/drive/folders/1nxPnQgDAFwPljLZ3inV63ticRh97uW9X?usp=sharing).
 {% endhint %}
