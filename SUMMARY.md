@@ -83,7 +83,6 @@
     * [Concurrent](validators/node/concurrent.md)
     * [Upgrade](validators/node/upgrade/README.md)
       * [Automated](validators/node/upgrade/automated.md)
-      * [Manual](validators/node/upgrade/manual.md)
   * [Reference](validators/reference/README.md)
     * [Customization](validators/reference/customization.md)
   * [System Requirements](validators/system-requirements/README.md)

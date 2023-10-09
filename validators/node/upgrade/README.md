@@ -14,24 +14,33 @@ layout:
 
 # Upgrade
 
-This guide lays out the standard method for upgrading the `cascadiad` binary.
+This guide will help you manually upgrade the `cascadiad` binary.
 
-\
-**Step 1: Stop the `cascadiad` service.**
+
+
+**Step 1: Initiate the upgrade proposal.**
+
+On the chain side, the upgrade proposal will be initiated and pass through governance.
+
+
+
+**Step 2: Stop the `cascadiad` service.**
 
 ```javascript
 sudo systemctl stop cascadiad
 ```
 
-\
-**Step 2: Navigate to the home directory.**
+
+
+**Step 3: Navigate to the home directory.**
 
 ```javascript
 cd $HOME
 ```
 
-\
-**Step 3: Download the latest Cascadia release.**
+
+
+**Step 4: Download the latest Cascadia release.**
 
 {% code overflow="wrap" %}
 ```javascript
@@ -43,21 +52,32 @@ curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/
 The latest `cascadiad` binary release can be found on [GitHub](https://github.com/cascadiafoundation/cascadia/releases).
 {% endhint %}
 
-\
+
+
 **Step 4: Make the downloaded file executable.**
 
 ```javascript
 chmod +x cascadiad
 ```
 
-\
+
+
 **Step 5: Replace the existing Cascadia binary with the latest version.**
 
 ```javascript
 sudo mv cascadiad $(which cascadiad)
 ```
 
-\
+Alternatively, use the following command to replace the binary:
+
+{% code overflow="wrap" %}
+```
+wget https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/cascadiad -O $(which cascadiad)
+```
+{% endcode %}
+
+
+
 **Step 6: Restart the `cascadiad` service.**
 
 ```javascript
