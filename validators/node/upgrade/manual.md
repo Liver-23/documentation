@@ -40,7 +40,7 @@ The latest `cascadiad` binary release can be found on [GitHub](https://github.co
 
 {% code overflow="wrap" %}
 ```javascript
-wget https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.5/cascadiad -O $(which cascadiad)
+wget https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/cascadiad -O $(which cascadiad)
 ```
 {% endcode %}
 
