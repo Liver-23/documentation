@@ -1,9 +1,5 @@
 # On-Chain Voting via CLI
 
-CascadiaFarms offers an on-chain voting mechanism. Follow the instructions below:
-
-
-
 **Step 1: Open your Command Line Interface (CLI)**
 
 
