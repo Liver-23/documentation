@@ -76,4 +76,38 @@ Each CIP must contain:
 >
 > **Voting**
 >
-> This vote will be live for three days. We appreciate and encourage an open discussion on this subject. This vote will be a single-choice vote. You may vote “For” or “Against” this proposal, or choose to abstain from the vote. By voting “For” this proposal, you are voting in favor implementing the changes in accordance with the specification set out in this proposal.
+> This vote will be live for three days. We appreciate and encourage an open discussion on this subject. This vote will be a single-choice vote. You may vote “For” or “Against” this proposal or abstain from the vote. By voting “For” this proposal, you are voting in favour of implementing the changes in accordance with the specifications set out in this proposal.
+
+
+
+### **Voting via CLI**
+
+For users familiar with CLI, CascadiaFarms offers an on-chain voting mechanism. Follow the instructions below to cast your vote.
+
+#### **Instructions**:
+
+1. **Open your Command Line Interface (CLI)**.
+2. **Input the following command to cast your vote**:
+
+```css
+cssCopy codecascadiad tx gov vote <proposal_number> <your_vote_choice> --gas-prices 7aCC --from <your_key_name> --node https://rpc.cascadia.foundation:443
+```
+
+* Replace `<proposal_number>` with the actual number of the proposal you wish to vote on (e.g., 23).
+* Replace `<your_vote_choice>` with your desired vote choice (e.g., yes, no, abstain).
+* Replace `<your_key_name>` with the name of your key.
+
+3. (Optional) **For users who wish to automatically adjust their gas prices**, you can add:
+
+```scss
+scssCopy code--gas auto --gas-adjustment 2
+```
+
+at the end of the command. This allows the system to determine the best gas price for your transaction and adjust it by a factor of 2.
+
+#### **Notes**:
+
+* Always ensure you're voting on the correct proposal number and double-check your choices before confirming.
+* Make sure your CLI environment is set up correctly and that you have sufficient funds to cover any transaction fees.
+
+\

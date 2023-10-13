@@ -34,4 +34,4 @@ After the idea is introduced, it becomes a subject of discussion among the commu
 
 **Proposal Evaluation and Progression**
 
-If the proposal gains community support as a \[Temperature Check], it can then be moved to \[CIP] for official voting, following the [proposal guidelines](proposals.md).
+If the proposal gains community support as a \[Temperature Check], it can then be moved to \[CIP] for official voting, following the [proposal guidelines](proposals/).
