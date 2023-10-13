@@ -22,7 +22,7 @@ The upgrade-info.json file will be created in the data folder after the upgrade 
 
 {% code overflow="wrap" %}
 ```javascript
-{"name":"v0.1.5","time":"0001-01-01T00:00:00Z","height":1774000,"info":"{\"binaries\":{\"linux/amd64\":\"https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.4/cascadiad-v0.1.5-linux-amd64.tar.gz\"}"}
+{"name":"v0.1.7","time":"0001-01-01T00:00:00Z","height":2820000,"info":"{\"binaries\":{\"linux/amd64\":\"https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.7/cascadiad-v0.1.7-linux-amd64.tar.gz\"}"}
 ```
 {% endcode %}
 
@@ -41,7 +41,7 @@ cosmovisor/
 │   └── bin
 │       └── cascadiad
 └── upgrades
-    └── v0.1.4
+    └── v0.1.7
         ├── bin
         │   └── cascadiad
         └── upgrade-info.json
@@ -53,20 +53,20 @@ Use the following command to download and extract the cascadiad binary to the up
 
 {% code overflow="wrap" %}
 ```javascript
-mkdir -p [your cosmovisor path]/cosmovisor/upgrades/v0.1.4
+mkdir -p [your cosmovisor path]/cosmovisor/upgrades/v0.1.7
 
-wget -O - https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.4/cascadiad-v0.1.4-linux-amd64.tar.gz | tar -xzvf - -C [your cosmovisor path]/cosmovisor/upgrades/v0.1.4 
+wget -O - https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.7/cascadiad-v0.1.7-linux-amd64.tar.gz | tar -xzvf - -C [your cosmovisor path]/cosmovisor/upgrades/v0.1.7
 ```
 {% endcode %}
 
 **Step 4: Create the upgrade-info.json file in the upgrade folder.**
 
-Finally, create the upgrade-info.json file in the 'upgrades/v0.1.4' folder using this command:
+Finally, create the upgrade-info.json file in the 'upgrades/v0.1.7' folder using this command:
 
 {% code overflow="wrap" %}
 ```javascript
 cat <<EOF > [your cosmovisor path]/cosmovisor/upgrades/upgrades/v0.1.4/upgrade-info.json
-{"name":"v0.1.4","time":"0001-01-01T00:00:00Z","height":1774000,"info":"{\"binaries\":{\"linux/amd64\":\"https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.4/cascadiad-v0.1.4-linux-amd64.tar.gz\"}"}
+{"name":"v0.1.7","time":"0001-01-01T00:00:00Z","height":2820000,"info":"{\"binaries\":{\"linux/amd64\":\"https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.7/cascadiad-v0.1.7-linux-amd64.tar.gz\"}"}
 EOF
 ```
 {% endcode %}
