@@ -27,7 +27,7 @@ sudo snap install lz4
 
 {% code overflow="wrap" %}
 ```
-wget -O cascadia_latest.tar.lz4 https://snapshot.cascadia.foundation/snapshots/null --inet4-only
+wget -O cascadia_latest.tar.lz4 https://snapshot.cascadia.foundation/$(curl -s https://snapshot.cascadia.foundation/info.txt | jq -r .filename) --inet4-only
 ```
 {% endcode %}
 
@@ -97,6 +97,6 @@ Run the following combo command to stream the snapshot into your database locati
 
 {% code overflow="wrap" %}
 ```
-curl -o - -L https://snapshot.cascadia.foundation/snapshots/$(curl -s https://snapshot.cascadia.foundation/snapshots/cascadia/info | jq -r .filename) | lz4 -c -d - | tar -x -C $HOME/.cascadiad data
+curl -o - -L https://snapshot.cascadia.foundation/$(curl -s https://snapshot.cascadia.foundation/info.txt | jq -r .filename) | lz4 -c -d - | tar -x -C $HOME/.cascadiad data
 ```
 {% endcode %}
