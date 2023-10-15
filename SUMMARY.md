@@ -34,7 +34,7 @@
     * [Block Explorer](developers/verification/block-explorer.md)
     * [Hardhat](developers/verification/hardhat.md)
 * [Governance](governance/README.md)
-  * [Alignment](governance/alignment/README.md)
+  * [Align](governance/alignment/README.md)
     * [Cooldown Period](governance/alignment/cooldown-period.md)
     * [Functions](governance/alignment/functions.md)
   * [Off-Chain](governance/off-chain.md)
