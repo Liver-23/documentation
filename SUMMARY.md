@@ -80,7 +80,7 @@
     * [Google Cloud Platform](validators/cloud-platforms/google-cloud-platform.md)
   * [Joining Testnet](validators/node/README.md)
     * [Sync from Snapshot](validators/node/sync-from-snapshot.md)
-    * [Sync with state-sync](validators/node/state-sync.md)
+    * [Sync with State-Sync](validators/node/state-sync.md)
     * [Upgrade](validators/node/upgrade/README.md)
       * [Automated](validators/node/upgrade/automated.md)
   * [Becoming a Validator](validators/installation.md)

@@ -126,27 +126,15 @@ sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025aCC\"/" ~
 
 
 
-There are mainly three ways to sync a node to the network
+**Step 7: Sync your node to the network.**
 
-1. Sync from Snapshot
-2. Sync with state-sync
-3. Upgrade a node when you're running the one already
+There are three main ways to sync a node to the network:
 
+1. [Sync from Snapshot](sync-from-snapshot.md)
+2. [Sync with State-Sync](state-sync.md)
+3. [Upgrade](upgrade/) your current node if you're running one already
 
-
-
-
-Move the following contents to "Sync from Snapshot"
-
-
-
-**Step 7: Download snapshot.**
-
-{% code overflow="wrap" %}
-```
-curl -o - -L https://snapshot.cascadia.foundation/$(curl -s https://snapshot.cascadia.foundation/info.txt | jq -r .filename) | lz4 -c -d - | tar -x -C $HOME/.cascadiad data
-```
-{% endcode %}
+After completing one of the above, continue with Step 8.
 
 
 
