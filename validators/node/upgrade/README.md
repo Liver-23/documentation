@@ -44,7 +44,7 @@ cd $HOME
 
 {% code overflow="wrap" %}
 ```javascript
-curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/cascadiad
+curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.7/cascadiad
 ```
 {% endcode %}
 
@@ -72,7 +72,7 @@ Alternatively, use the following command to replace the binary:
 
 {% code overflow="wrap" %}
 ```
-wget https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/cascadiad -O $(which cascadiad)
+wget https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.7/cascadiad -O $(which cascadiad)
 ```
 {% endcode %}
 

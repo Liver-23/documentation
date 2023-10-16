@@ -65,7 +65,7 @@ Finally, create the upgrade-info.json file in the 'upgrades/v0.1.7' folder using
 
 {% code overflow="wrap" %}
 ```javascript
-cat <<EOF > [your cosmovisor path]/cosmovisor/upgrades/upgrades/v0.1.4/upgrade-info.json
+cat <<EOF > [your cosmovisor path]/cosmovisor/upgrades/upgrades/v0.1.7/upgrade-info.json
 {"name":"v0.1.7","time":"0001-01-01T00:00:00Z","height":2820000,"info":"{\"binaries\":{\"linux/amd64\":\"https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.7/cascadiad-v0.1.7-linux-amd64.tar.gz\"}"}
 EOF
 ```

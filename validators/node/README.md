@@ -12,77 +12,17 @@ layout:
     visible: true
 ---
 
-# Node
+# Joining Testnet
 
 Once your instance is created on [Google Cloud](https://cascadia.gitbook.io/gitbook/validators/virtual-machine/google-cloud-setup), click the **"SSH"** button to open the terminal window.  For [AWS](https://cascadia.gitbook.io/gitbook/validators/virtual-machine/aws-setup), click the **"EC2 Instance Connect''** button.
 
 
 
-**Step 1: Install prerequisites.**
-
-Update the local package list and install available upgrades.
+**Step 1: Download a binary file.**
 
 {% code overflow="wrap" %}
 ```javascript
-sudo apt update && sudo apt upgrade -y
-sudo apt install make build-essential gcc git
-```
-{% endcode %}
-
-&#x20;
-
-**Step 2: Install Go.**
-
-{% code overflow="wrap" %}
-```javascript
-wget https://golang.org/dl/go1.19.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
-```
-{% endcode %}
-
-For non-standard configuration, utilize the `.profile` user's home folder (i.e. `~/`).
-
-{% hint style="info" %}
-Go can also be downloaded [here](https://golang.org/doc/install).  Please install **Go v1.19.2** or the latest version.
-{% endhint %}
-
-####
-
-**Step 3: Export.**
-
-```javascript
-GOROOT=/usr/local/go
-```
-
-```javascript
-GOPATH=$HOME/go
-```
-
-```javascript
-GO111MODULE=on
-```
-
-{% code overflow="wrap" %}
-```javascript
-PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-```
-{% endcode %}
-
-
-
-**Step 4: Update your `~/.profile`.**
-
-```javascript
-source ~/.profile
-```
-
-
-
-**Step 5: Build Cascadia from source.**
-
-{% code overflow="wrap" %}
-```javascript
-curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.6/cascadiad -o cascadiad
+curl -L https://github.com/CascadiaFoundation/cascadia/releases/download/v0.1.7/cascadiad -o cascadiad
 ```
 {% endcode %}
 
@@ -118,7 +58,7 @@ sudo chown ubuntu /usr/local/bin/cascadiad
 
 ####
 
-**Step 6: To confirm that the installation has succeeded, run:**
+**Step 2: To confirm that the installation has succeeded, run:**
 
 ```javascript
 cascadiad version
@@ -126,7 +66,7 @@ cascadiad version
 
 
 
-**Step 7: Initialize the chain.**
+**Step 3: Initialize the chain.**
 
 Replace \[moniker] with your own name and initialize `cascadiad`.
 
@@ -142,13 +82,13 @@ For example:
 
 {% code overflow="wrap" %}
 ```javascript
-cascadiad init ubuntu --chain-id cascadia_6102-1
+cascadiad init mynode --chain-id cascadia_6102-1
 ```
 {% endcode %}
 
 
 
-**Step 8: Download the genesis file.**
+**Step 4: Download the genesis file.**
 
 Download and replace the Cascadia Testnet `genesis.json` by:
 
@@ -162,7 +102,7 @@ cp genesis.json ~/.cascadiad/config/
 
 
 
-**Step 9: Set persistent peers.**
+**Step 5: Set persistent peers.**
 
 Persistent peers allow your node to connect to other nodes and join the network.
 
@@ -174,7 +114,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$(curl  https://raw
 
 
 
-**Step 10: Set minimum gas price.**
+**Step 6: Set minimum gas price.**
 
 In `~/.cascadiad/config/app.toml`, update the min gas price to avoid transaction spam.
 
@@ -186,7 +126,21 @@ sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025aCC\"/" ~
 
 
 
-**Step 11: Download snapshot.**
+There are mainly three ways to sync a node to the network
+
+1. Sync from Snapshot
+2. Sync with state-sync
+3. Upgrade a node when you're running the one already
+
+
+
+
+
+Move the following contents to "Sync from Snapshot"
+
+
+
+**Step 7: Download snapshot.**
 
 {% code overflow="wrap" %}
 ```
@@ -196,7 +150,7 @@ curl -o - -L https://snapshot.cascadia.foundation/$(curl -s https://snapshot.cas
 
 
 
-**Step 12: Create `systemd` service file.**
+**Step 8: Create `systemd` service file.**
 
 {% code overflow="wrap" %}
 ```javascript
@@ -206,7 +160,7 @@ sudo nano /etc/systemd/system/cascadiad.service
 
 
 
-**Step 13: Copy/paste the following configuration, save, and exit.**
+**Step 9: Copy/paste the following configuration, save, and exit.**
 
 Replace `<username>` with your own account name.
 
@@ -262,7 +216,7 @@ Press ctrl + s to save, then ctrl + x to exit.
 
 
 
-**Step 14: Start your Node.**
+**Step 10: Start your Node.**
 
 ```javascript
 # reload service files

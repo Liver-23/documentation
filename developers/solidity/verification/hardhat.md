@@ -180,4 +180,4 @@ npx hardhat verify –network Cascadia 0x856C336cD8eBDCE7B5Bb3F2DEB1bf3160B17688
 
 **Step 7: Contract verification can be confirmed via the console:**
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
