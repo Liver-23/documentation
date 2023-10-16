@@ -58,7 +58,7 @@ Each CIP must contain:
 >
 > **Specification**
 >
-> If approved, the votiing\_period paramater in the governance module shall be changed from XXX to 259200000000000.
+> If approved, the voting\_period parameter in the governance module shall be changed from XXX to 259200000000000.
 >
 >
 >
