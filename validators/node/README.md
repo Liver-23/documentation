@@ -186,7 +186,17 @@ sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025aCC\"/" ~
 
 
 
-**Step 11: Create `systemd` service file.**
+**Step 11: Download snapshot.**
+
+{% code overflow="wrap" %}
+```
+curl -o - -L https://snapshot.cascadia.foundation/$(curl -s https://snapshot.cascadia.foundation/info.txt | jq -r .filename) | lz4 -c -d - | tar -x -C $HOME/.cascadiad data
+```
+{% endcode %}
+
+
+
+**Step 12: Create `systemd` service file.**
 
 {% code overflow="wrap" %}
 ```javascript
@@ -196,7 +206,7 @@ sudo nano /etc/systemd/system/cascadiad.service
 
 
 
-**Step 12: Copy/paste the following configuration, save, and exit.**
+**Step 13: Copy/paste the following configuration, save, and exit.**
 
 Replace `<username>` with your own account name.
 
@@ -252,7 +262,7 @@ Press ctrl + s to save, then ctrl + x to exit.
 
 
 
-**Step 13: Start your Node.**
+**Step 14: Start your Node.**
 
 ```javascript
 # reload service files
