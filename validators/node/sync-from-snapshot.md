@@ -14,7 +14,7 @@ layout:
 
 # Sync from Snapshot
 
-**Step 1: Download snapshot**
+**Step 1: Download snapshot.**
 
 {% code overflow="wrap" %}
 ```
