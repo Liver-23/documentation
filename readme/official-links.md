@@ -28,7 +28,7 @@ Community
 
 Developers
 
-<table data-header-hidden><thead><tr><th width="232"></th><th></th></tr></thead><tbody><tr><td>Directory</td><td><a href="https://www.askclu.com/index.php/Community_Directory">https://www.askclu.com/index.php/Community_Directory</a></td></tr><tr><td>Gitbook</td><td><a href="https://cascadia.gitbook.io/gitbook/">https://cascadia.gitbook.io/gitbook</a></td></tr><tr><td>Github</td><td><a href="https://github.com/CascadiaFoundation">https://github.com/CascadiaFoundation</a></td></tr><tr><td>Snapshots</td><td><a href="https://snapshot.cascadia.foundation/">https://snapshot.cascadia.foundation/</a></td></tr><tr><td>UptimeRobot</td><td><a href="https://stats.uptimerobot.com/1v00Yi6PZA">https://stats.uptimerobot.com/1v00Yi6PZA</a></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="232"></th><th></th></tr></thead><tbody><tr><td>Directory</td><td><a href="https://www.askclu.com/index.php/Community_Directory">https://www.askclu.com/index.php/Community_Directory</a></td></tr><tr><td>Gitbook</td><td><a href="https://cascadia.gitbook.io/gitbook/">https://cascadia.gitbook.io/gitbook</a></td></tr><tr><td>Github</td><td><a href="https://github.com/CascadiaFoundation">https://github.com/CascadiaFoundation</a></td></tr><tr><td>Snapshot</td><td><a href="https://snapshot.cascadia.foundation/">https://snapshot.cascadia.foundation/</a></td></tr><tr><td>UptimeRobot</td><td><a href="https://stats.uptimerobot.com/1v00Yi6PZA">https://stats.uptimerobot.com/1v00Yi6PZA</a></td></tr></tbody></table>
 
 
 

@@ -12,9 +12,9 @@ layout:
     visible: true
 ---
 
-# Sync with State-Sync
+# State-Sync
 
-#### **Step 1: Stop service, reset data.**
+**Step 1: Stop service, reset data.**
 
 {% code overflow="wrap" %}
 ```
@@ -24,11 +24,13 @@ cascadiad tendermint unsafe-reset-all --home $HOME/.cascadiad --keep-addr-book
 ```
 {% endcode %}
 
+
+
 **Step 2: Get and configure state-sync.**
 
-It would be best to get an active RPC endpoint and its peer. Also, it would be better to know the frequency of the snapshot to adapt the following row with a correct value `SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 300))`, otherwise, state-sync will be failed.
+It would be best to get an active RPC endpoint and its peer.  It would also be helpful to know the frequency of the snapshot to adapt the following row with a correct value `SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 300))`, otherwise, state-sync will fail.
 
-Below is an example of one of the working validator's peers:
+Below is an example of a working validator's peers:
 
 {% code overflow="wrap" %}
 ```
@@ -51,6 +53,8 @@ sed -i \
 mkdir -p $HOME/.cascadiad/data && mv $HOME/.cascadiad/priv_validator_state.json.backup $HOME/.cascadiad/data/priv_validator_state.json
 ```
 {% endcode %}
+
+
 
 **Step 3: Restart service, check logs.**
 

@@ -126,9 +126,9 @@ sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025aCC\"/" ~
 
 There are three main ways to sync a node to the network:
 
-1. [Sync from Snapshot](sync-from-snapshot.md)
-2. [Sync with State-Sync](state-sync.md)
-3. [Upgrade](upgrade/) your current node if you're running one already
+1. [Snapshot](snapshot.md)
+2. [State-Sync](state-sync.md)
+3. [Upgrade](upgrade/) your existing node.
 
 After completing one of the above, continue with Step 8.
 
