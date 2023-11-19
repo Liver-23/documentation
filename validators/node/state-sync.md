@@ -35,7 +35,7 @@ Below is an example of a working validator's peers:
 {% code overflow="wrap" %}
 ```
 STATE_SYNC_RPC=https://cascadia.rpc.liveraven.net:443
-STATE_SYNC_PEER=5126c2904cf4d9ed9b2c6cd203fccbe3983229da@cascadia.rpc.liveraven:22656
+STATE_SYNC_PEER=5126c2904cf4d9ed9b2c6cd203fccbe3983229da@cascadia.rpc.liveraven.net:22656
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
 SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 300))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
